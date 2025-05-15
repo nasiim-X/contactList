@@ -28,13 +28,8 @@ class ContactManager
         string name = Console.ReadLine();
 
         Console.WriteLine("Enter phone nubmer: ");
-        string phoneNumber = Console.ReadLine();
-
-        // Create a new contact object and add it to the list
-        Contact newContact = new Contact(name, phoneNumber);
-        contacts.Add(newContact);
-
-        Console.WriteLine("\nContact added successfully!\n"); */
+        string phoneNumber = Console.ReadLine(); 
+        */
         
         string name;
         do
@@ -59,6 +54,7 @@ class ContactManager
             }
         } while (string.IsNullOrEmpty(phoneNumber));
 
+        // Create a new contact object and add it to the list
         Contact newContact = new Contact(name, phoneNumber);
         contacts.Add(newContact);
 
@@ -84,7 +80,33 @@ class ContactManager
 
         Console.WriteLine();
     }
-}
+
+    public void SearchContact()
+    {
+        Console.WriteLine("Enter the name to search: ");
+        string searchName = Console.ReadLine()?.Trim();
+
+        bool found = false;
+        foreach (var contact in contacts)
+        {
+            if(contact.Name.Equals(searchName, StringComparison.OrdinalIgnoreCase)) /*Use 'StringComparison.OrdinalIgnoreCase'?
+                                                                                     Makes the search case-insensitive, so "John" and "john" are treated the same.
+                                                                                     More user-friendly and practical in real - world scenarios.*/
+                            {
+                Console.WriteLine($"\nFound: Name: {contact.Name}, Phone: {contact.PhoneNumber}");
+                found = true;
+                break;
+            }
+        }
+
+        if (!found)
+        {
+            Console.WriteLine("Contact not found!");
+        }
+        Console.WriteLine();
+    }
+
+}//End of ContactManager
 
 class Program
 {
@@ -93,6 +115,7 @@ class Program
         ContactManager manager = new ContactManager();
         manager.AddContact();
         manager.DisplayContacts();
+        manager.SearchContact();
 
 
     }
