@@ -1,4 +1,9 @@
-﻿using System;
+﻿// provide options for user to choose between - creating, viewing, searching & deleting contact.
+// basaed on user options - provide that service || ask for other option to explore.
+// if user again choose any option from explorasion suggestion - walk'em through.
+
+
+using System;
 using System.Collections.Generic;
 using System.Threading.Channels;
 
@@ -113,9 +118,43 @@ class Program
     static void Main(string[] args)
     {
         ContactManager manager = new ContactManager();
-        manager.AddContact();
-        manager.DisplayContacts();
-        manager.SearchContact();
+        bool exit = false;
+
+        while(!exit)
+        {
+            Console.WriteLine("==== Contact List Application ====");
+            Console.WriteLine("1. Add a Contact");
+            Console.WriteLine("2. View All Contacts");
+            Console.WriteLine("3. Search for a Contact");
+            Console.WriteLine("4. Exit");
+            Console.Write("Choose an option: ");
+
+            string choice = Console.ReadLine();
+            Console.WriteLine();
+
+            switch (choice)
+            {
+                case "1": manager.AddContact(); break;
+
+                case "2": manager.DisplayContacts(); break;
+
+                case "3": manager.SearchContact(); break;
+
+                case "4":
+                    Console.WriteLine("Exiting ... ");
+                    exit = true;
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid option. Please choose a valid number (1-4).");
+                    break;
+            }
+        }
+
+
+       // manager.AddContact();
+       // manager.DisplayContacts();
+       // manager.SearchContact();
 
 
     }
