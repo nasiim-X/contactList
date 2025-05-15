@@ -12,3 +12,4 @@ G:\Csharp\contactList\contactList\obj\Debug\net8.0\refint\contactList.dll
 G:\Csharp\contactList\contactList\obj\Debug\net8.0\contactList.pdb
 G:\Csharp\contactList\contactList\obj\Debug\net8.0\contactList.genruntimeconfig.cache
 G:\Csharp\contactList\contactList\obj\Debug\net8.0\ref\contactList.dll
+G:\Csharp\contactList\contactList\obj\Debug\net8.0\contactList.sourcelink.json

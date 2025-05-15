@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.Generic; 
+using System.Collections.Generic;
+using System.Threading.Channels;
 
 class Contact
 {
@@ -22,6 +23,7 @@ class ContactManager
     // Method to add a new contact
     public void AddContact()
     {
+        /*
         Console.WriteLine("Enter contact name: ");
         string name = Console.ReadLine();
 
@@ -32,7 +34,37 @@ class ContactManager
         Contact newContact = new Contact(name, phoneNumber);
         contacts.Add(newContact);
 
+        Console.WriteLine("\nContact added successfully!\n"); */
+        
+        string name;
+        do
+        {
+            Console.WriteLine("Enter contact name: ");
+            name = Console.ReadLine()?.Trim();
+            if (string.IsNullOrEmpty(name))
+            {
+                Console.WriteLine("Name cannot be empty. Please try again!\n");
+            }
+
+        } while (string.IsNullOrEmpty(name));
+
+        string phoneNumber;
+        do
+        {
+            Console.WriteLine("Enter phone number : ");
+            phoneNumber = Console.ReadLine()?.Trim();
+            if (string.IsNullOrEmpty(phoneNumber))
+            {
+                Console.WriteLine("Phone Number expected! Please try again!\n ");
+            }
+        } while (string.IsNullOrEmpty(phoneNumber));
+
+        Contact newContact = new Contact(name, phoneNumber);
+        contacts.Add(newContact);
+
         Console.WriteLine("\nContact added successfully!\n");
+
+       
     }
 
     public void DisplayContacts()
@@ -65,3 +97,6 @@ class Program
 
     }
 }
+
+
+
