@@ -1,0 +1,14 @@
+G:\Csharp\contactList\contactList\bin\Debug\net8.0\contactList.exe
+G:\Csharp\contactList\contactList\bin\Debug\net8.0\contactList.deps.json
+G:\Csharp\contactList\contactList\bin\Debug\net8.0\contactList.runtimeconfig.json
+G:\Csharp\contactList\contactList\bin\Debug\net8.0\contactList.dll
+G:\Csharp\contactList\contactList\bin\Debug\net8.0\contactList.pdb
+G:\Csharp\contactList\contactList\obj\Debug\net8.0\contactList.GeneratedMSBuildEditorConfig.editorconfig
+G:\Csharp\contactList\contactList\obj\Debug\net8.0\contactList.AssemblyInfoInputs.cache
+G:\Csharp\contactList\contactList\obj\Debug\net8.0\contactList.AssemblyInfo.cs
+G:\Csharp\contactList\contactList\obj\Debug\net8.0\contactList.csproj.CoreCompileInputs.cache
+G:\Csharp\contactList\contactList\obj\Debug\net8.0\contactList.dll
+G:\Csharp\contactList\contactList\obj\Debug\net8.0\refint\contactList.dll
+G:\Csharp\contactList\contactList\obj\Debug\net8.0\contactList.pdb
+G:\Csharp\contactList\contactList\obj\Debug\net8.0\contactList.genruntimeconfig.cache
+G:\Csharp\contactList\contactList\obj\Debug\net8.0\ref\contactList.dll
